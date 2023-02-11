@@ -5,4 +5,6 @@ curl https://raw.githubusercontent.com/nasrulnoor/twintflask-gui/main/install.sh
 ```
 This project is based on <a href=https://github.com/twintproject/twint> Twint </a>
 
+Powered by ChatGPT
+
 Disclaimer: This is for educational use only. I am not responsible of any damage occured with the usage of this repository. 
