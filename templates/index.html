@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twint Web Scraping App</title>
+  </head>
+  <body>
+    <h1>Twint Web Scraping App</h1>
+    <form action="/" method="post">
+      <label for="search_term">Search Term:</label>
+      <input type="text" id="search_term" name="search_term">
+      <input type="submit" value="Search">
+    </form>
+    {% if tweets %}
+      <h2>Search Results for "{{ search_term }}"</h2>
+      <ul>
+        {% for tweet in tweets %}
+          <li>{{ tweet.tweet }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </body>
+</html>
