@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Twint Web Scraping App</title>
   </head>
   <body>
-    <h1>Twint Web Scraping App</h1>
-    <form action="/" method="post">
-      <label for="search_term">Search Term:</label>
-      <input type="text" id="search_term" name="search_term">
-      <input type="submit" value="Search">
-    </form>
-    {% if tweets %}
-      <h2>Search Results for "{{ search_term }}"</h2>
-      <ul>
-        {% for tweet in tweets %}
-          <li>{{ tweet.tweet }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+    <div class="container mt-5">
+      <h1 class="text-center">Twint Web Scraping App</h1>
+      <form action="/" method="post" class="form-group mt-5">
+        <label for="search_term">Search Term:</label>
+        <input type="text" id="search_term" name="search_term" class="form-control">
+        <input type="submit" value="Search" class="btn btn-primary mt-3">
+      </form>
+      {% if tweets %}
+        <h2 class="text-center mt-5">Search Results for "{{ search_term }}"</h2>
+        <ul class="list-group mt-3">
+          {% for tweet in tweets %}
+            <li class="list-group-item">{{ tweet.tweet }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
   </body>
 </html>
